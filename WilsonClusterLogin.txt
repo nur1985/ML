@@ -2,12 +2,12 @@
 
 A)Login to wilson cluster:
 $kinit 
-$ssh username@tev.fnal.gov
+$ssh $USER@tev.fnal.gov
 B) Area of usage:
-1) /home/username
-2) /data/username
+1) /home/$USER
+2) /data/$USER
 3) common area to save file /data/minerva/ . This area is 250 G. Generally we try to keep within 200-210 G.
-4) Area to save files:  /lfstev/e-938/username. You can save your big files here.
+4) Area to save files:  /lfstev/e-938/$USER. You can save your big files here.
  C) Singularity container:
    In wilson cluster, you have to load singularity container which will contain required software you want.
 Tev-admins have kept two img files here `/home/singularity/ML/`
