@@ -1,0 +1,7 @@
+
+# How to create and compile singularity images?
+- Save your file as Singularity.name
+- Save your file to your github.
+- Go to singulirity hub https://singularity-hub.org/
+- Compile all the files on the singulirity hub. It will copile all the files starting with name "Singulairty" with any extension.
+- Download the image in your area by doing a git pull: shub pull /githubpath/of/the/image 
