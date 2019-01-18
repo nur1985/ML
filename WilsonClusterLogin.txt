@@ -1,0 +1,29 @@
+
+
+A)Login to wilson cluster:
+$kinit 
+$ssh username@tev.fnal.gov
+B) Area of usage:
+1) /home/username
+2) /data/username
+3) common area to save file /data/minerva/ . This area is 250 G. Generally we try to keep within 200-210 G.
+4) Area to save files:  /lfstev/e-938/username. You can save your big files here.
+ C) Singularity container:
+   In wilson cluster, you have to load singularity container which will contain required software you want.
+Tev-admins have kept two img files here `/home/singularity/ML/`
+These two container contain tensorlflow. keras. So, if you want to start working with tensorflow or keras, you can use those containers.
+
+D)run job interactively
+1) export the singularity path: export PATH=/usr/local/singularity/bin:$PATH
+2) load the container as:
+singularity exec --nv /path/for/the/container/container bash
+Do your stuff
+3) To run job interactively on gpu, you have to login into gpu first. we have gpu1, gpu2 ,gpu3 and gpu4. For example, if you want to login into gpu1, you can do 
+srun --pty --gres=gpu:1 --nodelist=gpu1 -p gpu bash
+
+after login into gpu, follow the step 2) and 3) to load the container .
+
+You can go to this website http://wilsonweb.fnal.gov/slurm.shtml . You can find find detailed description on how to submit job, running job interactively etc.
+
+If you want to in detail about singularity, there is a nice page to look into:
+https://singularity.lbl.gov/install-mac
